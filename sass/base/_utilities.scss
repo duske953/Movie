@@ -1,0 +1,36 @@
+.u-margin-bottom-sm {
+    margin-bottom: 2rem !important
+}
+
+.u-margin-bottom-lt {
+    margin-bottom: 1.6rem !important
+}
+
+
+.absolute {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+// .u-btn {
+//     background: none !important;
+//     background-color: initial !important;
+//     padding: 0 0 0.6rem 0 !important;
+//     border-radius: initial !important;
+//     font-weight: 500 !important;
+//     border-bottom: 1px solid #fff !important
+// }
+
+.u-link:link,
+.u-link:visited,
+.u-btn {
+    font-family: inherit;
+    background-color: initial !important;
+    padding: 0 0 0.6rem 0 !important;
+    border-radius: initial !important;
+    font-weight: 500 !important;
+    border-bottom: 1px solid #fff !important
+}

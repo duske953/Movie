@@ -1,0 +1,26 @@
+.primary-btn:link,
+.primary-btn:visited {
+    text-decoration: none;
+    background-color: $color-secondary;
+    color: $color-primary;
+    font-size: 1.6rem;
+    padding: 1.2rem 4.4rem;
+    display: inline-block;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.secondary-btn {
+    font-size: 1.6rem;
+    background-color: $color-secondary;
+    padding: 1.2rem 3.7rem;
+    border: none;
+    color: $color-primary;
+    border-radius: 100px;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.icon {
+    font-size: 1.4rem;
+}

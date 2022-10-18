@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script defer src="/script.js"></script>
+    <%-include("partials/header.ejs")%>
+    <title>Movie not found</title>
+</head>
+
+<body style="position:initial">
+    <%-include("partials/nav")-%>
+
+    <div class="message">
+        <p><%=err%></p>
+    </div>
+
+    <%-include("partials/footer.ejs")-%>
+
+</body>
+
+</html>

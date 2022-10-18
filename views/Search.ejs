@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script defer src="/script.js"></script>
+  <%-include("partials/header")-%>
+  <title><%=searchTitle%></title>
+</head>
+
+<body>
+  <%-include("partials/nav.ejs")-%>
+
+  <section class="search-section">
+    <h3 class="tertiary-heading container u-margin-bottom-sm">Search results for <%=searchTitle%> </h3>
+    <div class="card container">
+      <%data.forEach(movie => {%>
+      <%if(movie.poster_path){%>
+      <figure class="card__box">
+        <div class="card__img-box">
+          <a href="/<%=movie.movieType%>/<%=movie.id%>"> <img class="card__img lazy-img"
+              src="https://image.tmdb.org/t/p/w300/<%=movie.poster_path%>" alt="<%=movie.original_name%>"></a>
+          <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
+        </div>
+        <figcaption class="card__text-box">
+          <p class="card__text"><%=movie.original_name%></p>
+        </figcaption>
+      </figure>
+      <%}%>
+      <%})%>
+
+    </div>
+  </section>
+  <%-include("partials/footer")-%>
+</body>
+
+</html>

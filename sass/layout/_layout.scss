@@ -1,0 +1,16 @@
+.container {
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+.grid-2--cols {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.grid-5--cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

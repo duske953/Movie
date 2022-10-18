@@ -1,0 +1,81 @@
+.card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    column-gap: 1.4rem;
+    row-gap: 2.2rem;
+    align-items: center;
+
+    @media (max-width:$media-2) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width:$media-3) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width:$media-4) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width:$media-5) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: 1.2rem;
+        border-radius: 5px;
+        height: 30rem;
+
+    }
+
+    &__img-box {
+        position: relative
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        color: $color-primary;
+        line-height: 1.5;
+    }
+
+    &__text-box {
+        text-align: left;
+    }
+
+    &__rating {
+        position: absolute;
+        color: #fff;
+        background-color: $color-secondary;
+        padding: 0.6rem 2.4rem;
+        border-radius: 100px;
+        right: -1rem;
+        bottom: 0.3rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+.card--primary,
+.similar-section {
+    padding: 5.4rem 1.2rem;
+
+    &__container {
+        display: flex;
+        overflow: auto;
+        gap: 1.2rem;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: initial;
+        border-radius: 6px;
+        height: 25rem;
+    }
+}
