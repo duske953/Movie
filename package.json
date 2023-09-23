@@ -8,6 +8,7 @@
     }
   },
   "scripts": {
+    "start":"node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "parcel-dev": "parcel watch ./public/js/script.js",
     "parcel-prod": "parcel build ./public/js/script.js",
