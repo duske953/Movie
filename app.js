@@ -3,13 +3,15 @@ const express = require("express");
 const compression = require("compression");
 const minifyHTML = require("express-minify-html");
 const app = express();
+const morgan = require("morgan");
 const xss = require("xss-clean");
 const homeRouter = require("./router/homeRouter");
 const movieInfoRouter = require("./router/movieInfoRouter");
 const searchMovieRouter = require("./router/searchMovieRouter");
+const path = require("path");
 
 app.use(xss());
-
+app.use(morgan("dev"));
 app.use(compression());
 app.use(
   minifyHTML({
@@ -25,7 +27,7 @@ app.use(
     },
   })
 );
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname + "/public")));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
