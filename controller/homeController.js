@@ -1,4 +1,4 @@
-const axios = require("axios");
+const axios = require('axios');
 
 function getMovies(type, category, page) {
   return new Promise(async (resolve, reject) => {
@@ -18,13 +18,13 @@ exports.getHomePage = async (req, res) => {
   let trendingMovies = [];
   let trendingSeries = [];
   try {
-    movies.push(await getMovies("movie", "popular", 1));
-    movies.push(await getMovies("tv", "popular", 1));
+    movies.push(await getMovies('movie', 'popular', 1));
+    movies.push(await getMovies('tv', 'popular', 1));
 
-    trendingMovies.push(await getMovies("movie", "now_playing", 2));
-    trendingSeries.push(await getMovies("tv", "on_the_air", 1));
-    res.render("home", { movies, trendingMovies, trendingSeries });
+    trendingMovies.push(await getMovies('movie', 'now_playing', 2));
+    trendingSeries.push(await getMovies('tv', 'on_the_air', 1));
+    res.render('home', { movies, trendingMovies, trendingSeries });
   } catch (err) {
-    res.render("err", { err });
+    res.render('err', { err: 'Something went wrong' });
   }
 };
