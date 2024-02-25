@@ -1,8 +1,8 @@
+"use strict"
 import $ from "jquery";
 import "slick-carousel";
 import lozad from "lozad";
 
-console.log($)
 const heroContainer = document.querySelector(".hero-section__container");
 const heroSectionBox = document.querySelectorAll(".hero-section__box");
 const heroSection = document.querySelector(".hero-section");
@@ -20,7 +20,7 @@ const menuIcon = document.querySelector(".icon-menu");
 const form = document.querySelector(".nav__form");
 const errBox = document.querySelector(".err-box");
 
-document.querySelector("body").scrollIntoView();
+
 
 $(heroContainer).slick({
   autoplay: true,
@@ -31,7 +31,7 @@ $(heroContainer).slick({
   autoplaySpeed: 5000,
   arrows:false,
 });
-
+document.querySelector("body").scrollIntoView();
 function gotToCarousel() {
   const slideIndex = localStorage.getItem("index");
   if (!slideIndex) return;
