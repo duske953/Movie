@@ -22,7 +22,7 @@
           <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
         </div>
         <figcaption class="card__text-box">
-          <p class="card__text"><%=movie.original_name%></p>
+          <p class="card__text"><%=movie.original_name.slice(0,40).padEnd(movie.original_name.length," .")%></p>
         </figcaption>
       </figure>
       <%}%>

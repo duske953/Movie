@@ -16,7 +16,7 @@
       <div class="hero-section__container container">
         <%movies.forEach(movie => {%>
         <%movie.results.forEach(mov => {%>
-        <div class="hero-section__box grid-2--cols">
+        <div class="hero-section__box">
           <div class="hero-section__content">
             <div class="hero-section__genre">
             </div>
@@ -31,9 +31,8 @@
           </div>
 
           <div class="hero-section__img-box">
-            <img class="hero-section__img lazy-img" data-src="https://image.tmdb.org/t/p/original/<%=mov.poster_path%>"
-              data-poster="https://image.tmdb.org/t/p/original<%=mov.backdrop_path%>"
-              alt="<%=mov.title ? mov.title : mov.name%>">
+            <div data-poster="https://image.tmdb.org/t/p/original<%=mov.backdrop_path%>" class="hero-section__img lazy-img">
+            </div>  
           </div>
         </div>
         <%})%>
@@ -52,7 +51,7 @@
             <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
           </div>
           <figcaption class="card__text-box">
-            <p class="card__text"><%=movie.title%></p>
+            <p class="card__text"><%=movie.title.slice(0,40).padEnd(movie.title.length," .")%></p>
           </figcaption>
         </figure>
         <%}%>
@@ -73,7 +72,7 @@
             <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
           </div>
           <figcaption class="card__text-box">
-            <p class="card__text"><%=movie.name%></p>
+            <p class="card__text"><%=movie.name.slice(0,40).padEnd(movie.name.length," .")%></p>
           </figcaption>
         </figure>
         <%}%>

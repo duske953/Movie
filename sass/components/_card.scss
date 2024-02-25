@@ -1,17 +1,17 @@
 .card {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    column-gap: 1.4rem;
-    row-gap: 2.2rem;
+    column-gap: 3.4rem;
+    row-gap: 5.4rem;
     align-items: center;
 
     @media (max-width:$media-2) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     @media (max-width:$media-3) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     @media (max-width:$media-4) {
@@ -59,12 +59,12 @@
 
 .card--primary,
 .similar-section {
-    padding: 5.4rem 1.2rem;
+    padding: 5.4rem 3.2rem;
 
     &__container {
         display: flex;
         overflow: auto;
-        gap: 1.2rem;
+        gap: 3rem;
         -ms-overflow-style: none;
         scrollbar-width: none;
 

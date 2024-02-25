@@ -69,7 +69,7 @@
           </div>
         </div>
         <%}%>
-  <%if(foundMovie.credits.cast.length === 1 && !foundMovie.credits.cast[0].profile_path){%>
+  <%if(foundMovie.credits.cast.length === 1 && !foundMovie.credits.cast[0].profile_path || foundMovie.credits.cast.length === 0){%>
         <%}else {%>
         <section class="card--primary">
           <h3 class="tertiary-heading container u-margin-bottom-sm">Casts</h3>
@@ -107,7 +107,7 @@
                 <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
               </div>
               <figcaption class="card__text-box">
-                <p class="card__text"><%=movie.name ? movie.name : movie.title%></p>
+                <p class="card__text"><%=movie.name ? movie.name.slice(0,40).padEnd(movie.name.length," .") : movie.title.slice(0,40).padEnd(movie.title.length," .")%></p>
               </figcaption>
             </figure>
             <%}%>

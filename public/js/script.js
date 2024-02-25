@@ -1,6 +1,8 @@
 import $ from "jquery";
 import "slick-carousel";
 import lozad from "lozad";
+
+console.log($)
 const heroContainer = document.querySelector(".hero-section__container");
 const heroSectionBox = document.querySelectorAll(".hero-section__box");
 const heroSection = document.querySelector(".hero-section");
@@ -25,8 +27,9 @@ $(heroContainer).slick({
   infinite: true,
   speed: 300,
   slidesToShow: 1,
-  adaptiveHeight: true,
+  adaptiveHeight: false,
   autoplaySpeed: 5000,
+  arrows:false,
 });
 
 function gotToCarousel() {
@@ -57,6 +60,7 @@ $(heroContainer).on("afterChange", () => {
 
 if (btnTrailer) {
   btnTrailer.addEventListener("click", () => {
+
     movieTrailerBox.classList.add("movie-section__trailer-container--active");
     overlay.classList.add("overlay--active");
   });
@@ -76,6 +80,8 @@ if (trailerClosebox) {
     movieTrailerBox.classList.remove(
       "movie-section__trailer-container--active"
     );
+    movieTrailerBox.querySelector("iframe").
+    setAttribute("src",movieTrailerBox.querySelector("iframe").getAttribute("src"))
     overlay.classList.remove("overlay--active");
   });
 }
@@ -88,4 +94,4 @@ if (menuIcon) {
 setTimeout(() => {
   const observer = lozad(cardImg); // lazy loads elements with default selector as '.lozad'
   observer.observe();
-}, 2000);
+}, 50);
