@@ -13,7 +13,7 @@
   <main>
 
     <section class="hero-section">
-      <div class="hero-section__container container">
+      <div style='display: flex' class="hero-section__container container">
         <%movies.forEach(movie => {%>
         <%movie.results.forEach(mov => {%>
         <div class="hero-section__box">
@@ -84,7 +84,6 @@
   </main>
 
   <%-include("partials/footer")-%>
-
 </body>
 
 </html>
