@@ -597,7 +597,7 @@ if (menuIcon) menuIcon.addEventListener("click", ()=>{
 setTimeout(()=>{
     const observer = (0, _lozadDefault.default)(cardImg); // lazy loads elements with default selector as '.lozad'
     observer.observe();
-}, 50);
+}, 5);
 
 },{"lozad":"j31H6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","slick-carousel":"ghMFH","jquery":"hgMhh"}],"j31H6":[function(require,module,exports) {
 /*! lozad.js - v1.16.0 - 2020-09-06
