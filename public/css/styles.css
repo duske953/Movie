@@ -276,7 +276,7 @@ body {
 .card--primary__container,
 .similar-section__container {
   display: flex;
-  overflow: auto;
+  overflow-x: auto;
   gap: 3rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -287,8 +287,9 @@ body {
 }
 .card--primary__img,
 .similar-section__img {
-  width: initial;
+  object-fit: cover;
   border-radius: 6px;
+  width: 20rem;
   height: 25rem;
 }
 
@@ -310,10 +311,12 @@ body {
 }
 
 .header {
-  z-index: 1;
+  z-index: 1000;
   width: 100%;
   border-bottom: 0.4px solid #fff;
   background-color: #000;
+  position: sticky;
+  top: 0;
 }
 
 .hero-section {
@@ -590,17 +593,21 @@ body {
   flex: 1;
 }
 .trending-movies__img {
-  width: initial;
   border-radius: 6px;
+  width: 20rem;
+  object-fit: cover;
   height: 25rem;
 }
 
 .message {
   color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+  padding: 0 1.4rem;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
   font-size: 5.4rem;
   width: 100%;
   text-align: center;

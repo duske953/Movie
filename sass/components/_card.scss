@@ -63,7 +63,7 @@
 
     &__container {
         display: flex;
-        overflow: auto;
+        overflow-x: auto;
         gap: 3rem;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -74,8 +74,9 @@
     }
 
     &__img {
-        width: initial;
+        object-fit: cover;
         border-radius: 6px;
+        width: 20rem;
         height: 25rem;
     }
 }
