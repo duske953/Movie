@@ -47,7 +47,9 @@
         <figure class="card__box trending-movies__card">
           <div class="card__img-box">
             <a href="/movie/<%=movie.id%>"> <img class="card__img trending-movies__img lazy-img"
-                data-src="https://image.tmdb.org/t/p/w300/<%=movie.poster_path%>" alt="<%=movie.title%>"></a>
+                data-src="https://image.tmdb.org/t/p/w300/<%=movie.poster_path%>"  
+                data-placeholder-background="#f8f9fa" 
+                alt="<%=movie.title%>"></a>
             <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
           </div>
           <figcaption class="card__text-box">
@@ -66,8 +68,9 @@
         <%if(movie.poster_path){%>
         <figure class="card__box trending-movies__card">
           <div class="card__img-box">
-            <a href="/tv/<%=movie.id%>"> <img class="card__img trending-movies__img lazy-img"
+            <a href="/tv/<%=movie.id%>"> <img  class="card__img trending-movies__img lazy-img"
                 data-src="https://image.tmdb.org/t/p/w220_and_h330_face/<%=movie.poster_path%>"
+                data-placeholder-background="#f8f9fa" 
                 alt="<%=movie.name%>"></a>
             <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
           </div>

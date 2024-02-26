@@ -18,7 +18,9 @@
       <figure class="card__box">
         <div class="card__img-box">
           <a href="/<%=movie.movieType%>/<%=movie.id%>"> <img class="card__img lazy-img"
-              src="https://image.tmdb.org/t/p/w300/<%=movie.poster_path%>" alt="<%=movie.original_name%>"></a>
+              data-src="https://image.tmdb.org/t/p/w300/<%=movie.poster_path%>" 
+              data-placeholder-background="#f8f9fa" 
+              alt="<%=movie.original_name%>"></a>
           <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
         </div>
         <figcaption class="card__text-box">

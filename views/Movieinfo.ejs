@@ -10,6 +10,7 @@
 
 <body>
   <%-include("partials/nav")-%>
+  <%console.log(foundMovie.episode_run_time)%>
   <section class="movie-section">
     <div class="movie-section__img-box">
       <img class="movie-section__img lazy-img"
@@ -45,7 +46,7 @@
           <p><span><%=foundMovie.revenue ? "Box office" : "No of seasons"%>: </span>
             <span><%=foundMovie.revenue ? `$${foundMovie.revenue}` : foundMovie.number_of_seasons%></span></p>
           <%}%>
-          <%if(foundMovie.runtime || foundMovie?.episode_run_time){%>
+          <%if(foundMovie.runtime || foundMovie?.episode_run_time && foundMovie?.episode_run_time.length !== 0){%>
           <p><span>Runtime:</span>
             <span><%=foundMovie.runtime ? foundMovie.runtime : foundMovie?.episode_run_time[0]%>min</span></p>
           <%}%>
@@ -80,7 +81,9 @@
               <div class="card__img-box">
                 <a href="https://en.wikipedia.org/wiki/<%=cast.name%>" target="__blank">
                   <img class="card__img card--primary__img lazy-img"
-                    data-src="https://image.tmdb.org/t/p/w300/<%=cast.profile_path%>" alt="<%=cast.name%>"></a>
+                    data-src="https://image.tmdb.org/t/p/w300/<%=cast.profile_path%>"
+                    data-placeholder-background="#f8f9fa" 
+                     alt="<%=cast.name%>" /></a>
               </div>
               <figcaption class="card__text-box">
                 <p class="card__text"><%=cast.name%></p>
@@ -103,7 +106,8 @@
               <div class="card__img-box">
                 <a href="/<%=movieType%>/<%=movie.id%>"> <img class="card__img lazy-img"
                     data-src="https://image.tmdb.org/t/p/w300/<%=movie.poster_path%>"
-                    alt="<%=movie.name ? movie.name : movie.title%>"></a>
+                    data-placeholder-background="#f8f9fa" 
+                    alt="<%=movie.name ? movie.name : movie.title%>" /></a>
                 <span class="card__rating"><%=Math.trunc(movie.vote_average)%>/10</span>
               </div>
               <figcaption class="card__text-box">
