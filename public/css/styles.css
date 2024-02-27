@@ -463,8 +463,7 @@ body {
 }
 .movie-section__img {
   width: 100%;
-  /* height: 100vh; */
-  max-height: 72rem;
+  max-height: 70rem;
 }
 .movie-section__genre {
   display: flex;
@@ -529,6 +528,7 @@ body {
 .movie-section__trailer-container--active {
   transform: translate(-50%, -50%);
   opacity: 1;
+  z-index: 2000;
   visibility: visible;
   pointer-events: auto;
 }
