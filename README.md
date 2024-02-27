@@ -43,7 +43,7 @@ This repository contains the source code for a movie website, built as a server-
 3. **Run the application:**
 
    ```bash
-   npm start
+   node app.js
    ```
 
    (This will typically start the development server, allowing you to view the website in your browser.)
