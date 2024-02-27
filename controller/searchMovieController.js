@@ -22,7 +22,7 @@ exports.searchMovie = async (req, res, next) => {
         id: movies.id,
       };
     });
-    if (!data || data.length === 0 || data[0].movieType === "person")
+    if (!data || data.length === 0 || data[0].movieType === "person" || data.length === 1 && !data[0].poster_path)
       throw new Error("movie not found");
     res.render("Search", { data, searchTitle: req.query.title });
   } catch (err) {
