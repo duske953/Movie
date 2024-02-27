@@ -360,6 +360,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .hero-section__genre {
   display: flex;
@@ -378,7 +379,6 @@ body {
 }
 
 .movie-section {
-  min-height: 70rem;
   position: relative;
   background-repeat: no-repeat !important;
   background-size: cover !important;

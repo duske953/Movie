@@ -52,6 +52,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align:center;
     }
 
     &__genre {
@@ -74,7 +75,7 @@
 }
 
 .movie-section {
-    min-height: 70rem;
+    // min-height: 70rem;
     position: relative;
     // background-position: center center !important;
     background-repeat: no-repeat !important;
